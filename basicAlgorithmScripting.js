@@ -119,3 +119,39 @@ function booWho(bool) {
 
 booWho(null);
 
+function titleCase(inputString) {
+    var arr = inputString.split(" ");
+    var arr2 = [];
+    for (var i = 0; i < arr.length; i++) {
+        arr2.push(arr[i].slice(0, 1).toUpperCase() + arr[i].slice(1, arr[i].length).toLowerCase());
+    }
+    return arr2.join(" ");
+}
+
+titleCase("I'm a little tea pot");
+
+function frankenSplice(arr1, arr2, n) {
+    let index = n;
+    let arr3 = [];
+    arr2.map(x => arr3.push(x))
+    for (let i = 0; i < arr1.length; i++) {
+        arr3.splice(index, 0, arr1[i]);
+        index++;
+    }
+    return arr3;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+function bouncer(arr) {
+    let newArr = [];
+    arr.map(
+        (x) => {
+            x ? newArr.push(x) : null
+        }
+    )
+    return newArr;
+}
+
+bouncer([7, "ate", "", false, 9]);
+
