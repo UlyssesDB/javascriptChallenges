@@ -160,3 +160,15 @@ function getIndexToIns(arr, num) {
 }
 
 getIndexToIns([40, 60], 50);
+
+function mutation(x){ // not happy with this one, don't fully understand the logic
+    let a = x[1].toLowerCase();
+    let b = x[0].toLowerCase();
+    for (let i = 0; i < a.length; i++) {
+      if (b.indexOf(a[i]) < 0)
+        return false;
+    }
+    return true;
+  }
+  
+  mutation(["hello", "hey"]);
