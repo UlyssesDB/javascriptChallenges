@@ -20,4 +20,9 @@ function sumAll(arr) {
   console.log(sumAll([5, 10]));
   console.log(sumAll([10, 5]));
 
+  function diffArray(arr1, arr2) {
+    return [...new Set(arr1.concat(arr2))].filter(f => !arr1.includes(f) ||  !arr2.includes(f));
+  }
   
+//   diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+  diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"])
