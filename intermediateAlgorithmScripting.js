@@ -26,3 +26,15 @@ function sumAll(arr) {
   
 //   diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
   diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"])
+
+  function destroyer(arr) {
+    let test = Object.values(arguments).splice(1,arguments.length);
+    return arr.filter(function(x) {
+      return !test.includes(x); 
+      }
+    )
+  }
+  
+  destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+  
